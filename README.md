@@ -7,4 +7,6 @@ set RGB values there.
 
 -> if you want to color cycle through all posssible colors(almost) use the other file
 
+Consolidated Library Comming Soon.
+
 MCU - ATmega1284p  
