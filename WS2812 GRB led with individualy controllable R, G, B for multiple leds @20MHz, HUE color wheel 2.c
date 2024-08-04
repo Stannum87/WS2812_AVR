@@ -2,7 +2,7 @@
  * ws2812_test.cpp
  *
  * Created: 25-Apr-24 12:00:39 AM
- * Author : iqbal
+ * Author : Sadeed
  */ 
 
 #define F_CPU 20000000UL
