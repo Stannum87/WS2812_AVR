@@ -2,7 +2,7 @@
  * ws2812_test.cpp
  *
  * Created: 25-Apr-24 12:00:39 AM
- * Author : Sadeed
+ * Author : iqbal
  */ 
 
 #define F_CPU 20000000UL
@@ -23,22 +23,22 @@ volatile uint8_t B = 0x01;
 volatile uint8_t *pB = &B;
 	
 volatile char Color_Flag = 1;
-volatile unsigned int n = 0;
+volatile uint16_t n = 0;
 
-volatile unsigned int Key_Color = 1;
+volatile uint8_t Key_Color = 1;
 
-volatile unsigned int Count = 0;
+volatile uint8_t Count = 0;
 
 
 
-int rb = 0;
+uint8_t rb = 0;
 
-int redkey = 0;
-int greenkey = 1;
-int bluekey = 0;
+uint8_t redkey = 0;
+uint8_t greenkey = 1;
+uint8_t bluekey = 0;
 
-	int gb = 0;
-	int bb = 1;
+	uint8_t gb = 0;
+	uint8_t bb = 1;
 
 void RGB()
 {
@@ -178,33 +178,33 @@ sei();
 	
 //	int LED_NUMC = 0;
 	
-	unsigned int Leds = 2; // no. of leds, minnimum is 1
-	unsigned int LED_NUM = Leds*24  ;
+	uint8_t Leds = 60; // no. of leds, minnimum is 1
+	uint16_t LED_NUM = Leds*24  ;
 	
 	
 			
 		
-	int V = 0;
+//	int V = 0;
 	
-		unsigned int m1 = 0;
+		uint16_t m1 = 0;
 	
 	
 
 	
 volatile uint8_t R_Buff = 0;
-		unsigned int R_Val = 0;
+		uint8_t R_Val = 0;
 	 
 	
 volatile uint8_t G_Buff = 0;
-		unsigned int G_Val = 0;
+		uint8_t G_Val = 0;
 	
 	
 volatile uint8_t B_Buff = 0;
-	unsigned int B_Val = 0;
+	uint8_t B_Val = 0;
 	
 	char Code = 0; 
-	
-	 uint16_t array[100]; // if you see any garbage values, you can make it static to make all elements 0, maybe 
+	// if it doesnt work change it to uint16
+ uint8_t array[10000]; // if you see any garbage values, you can make it static to make all elements 0, maybe 
 	 
 	//////////////////////////////////////////////// inverted because ws2812 starts from MSB
 // 	for (int m=0; m<8; m++)

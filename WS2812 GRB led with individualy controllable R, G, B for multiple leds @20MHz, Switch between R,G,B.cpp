@@ -31,15 +31,15 @@ int main(void)
 	
 //	int LED_NUMC = 0;
 	
-	unsigned int Leds = 2; // no. of leds, minnimum is 1
-	unsigned int LED_NUM = Leds*24  ;
+	unsigned int Leds = 20; // no. of leds, minnimum is 1
+	uint16_t LED_NUM = Leds*24  ;
 	
 	
-			unsigned int n = 0;
+			uint16_t n = 0;
 		char Color_Flag = 1;
 	int V = 0;
 	
-		unsigned int m1 = 0;
+		uint16_t m1 = 0;
 	
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Set Color Here	
@@ -60,7 +60,7 @@ volatile uint8_t B_Buff = 0;
 	
 	char Code = 0; 
 	
-	 uint16_t array[100]; // if you see any garbage values, you can make it static to make all elements 0, maybe 
+volatile uint16_t array[1000]; // if you see any garbage values, you can make it static to make all elements 0, maybe 
 	 
 	//////////////////////////////////////////////// inverted because ws2812 starts from MSB
 // 	for (int m=0; m<8; m++)
@@ -111,6 +111,7 @@ volatile uint8_t B_Buff = 0;
 // 															for (int L1=0; L1<2)
 // 															{
 																	while (n<LED_NUM) // at 24 its working
+																//	while (1)
 																	{
 			
 					
@@ -258,7 +259,7 @@ volatile uint8_t B_Buff = 0;
 										}
 									//	Color_Flag = 0;
 									}
-/*										
+										
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////										
 										// comment this part - Application layer
 									if (V==0)
@@ -286,7 +287,7 @@ volatile uint8_t B_Buff = 0;
 									V++;	
 										// comment this part - Application layer
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////					
-*/					
+					
 				
 //TIMSK1 |= 1<<OCIE1A;	//		sei();
 				
