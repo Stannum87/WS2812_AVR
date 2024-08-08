@@ -316,7 +316,7 @@ volatile uint8_t B_Buff = 0;
 //PORTA ^= 1<<PINA5;	
 
 _delay_ms(1000);
-	}
+	}//
 			
 }
 // 

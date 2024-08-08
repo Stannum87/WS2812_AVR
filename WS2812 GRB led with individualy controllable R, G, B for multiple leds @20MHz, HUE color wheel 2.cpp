@@ -468,7 +468,7 @@ TIMSK1 |= 1<<OCIE1A;	//		sei();
 //_delay_ms(1000);
 	}
 			
-}
+} //
 // 
 		 			 			 			 		 	 		 			 		ISR(TIMER1_COMPA_vect)
 		 			 			 			 		 	 		 			 		{
